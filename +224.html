@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achat Formation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #3774c9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    }
+    .btn-achat {
+        background-color: #3950e0;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s;
+    }
+    .btn-achat:hover {
+        background-color: #218838;
+    }
+    .form-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid #555;
+        z-index: 9;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .form-container input[type=text], 
+    .form-container input[type=email], 
+    .form-container input[type=tel] {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .form-container .btn-submit {
+        background-color: #28a745;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+    .form-container .btn-submit:hover {
+        background-color: #218838;
+    }
+    .form-container .btn-cancel {
+        background-color: #dc3545;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .form-container .btn-cancel:hover {
+        background-color: #c82333;
+    }
+</style>
+</head>
+<body>
+
+<h2>Remplisser votre Formulaire Achat</h2>
+<button class="btn-achat" onclick="openForm()">Acheter maintenant</button>
+
+<div class="form-popup" id="achatForm">
+  <form class="form-container" action="https://formspree.io/f/xvgwrekl" method="POST">
+    <h3>Formulaire d'achat</h3>
+
+    <label for="nom"><b>Nom</b></label>
+    <input type="text" placeholder="Votre nom" name="Nom" required>
+
+    <label for="prenom"><b>Prénom</b></label>
+    <input type="text" placeholder="Votre prénom" name="Prénom" required>
+
+    <label for="lieu"><b>Lieu de livraison</b></label>
+    <input type="text" placeholder="Ville / Quartier" name="Lieu" required>
+
+    <label for="nom de la formations"><b>Nom de la formations</b></label>
+    <input type="text" placeholder="Nom de la formations" name="Lieu" required>
+
+    <label for="numérique"><b>Nombre de Commende</b></label>
+    <input type="text" placeholder="Nombre de Commende" name="Lieu" required>
+
+    <label for="contact"><b>Contact</b></label>
+    <input type="tel" placeholder="Numéro de contact" name="Contact" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Votre email" name="Email" required>
+
+    <button type="submit" class="btn-submit">Envoyer</button>
+    <button type="button" class="btn-cancel" onclick="closeForm()">Annuler</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("achatForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("achatForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image et texte alignés</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex; /* met l'image et le texte sur la même ligne */
+      align-items: center; /* centre verticalement */
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+    }
+
+    .container img {
+      width: 400px; /* taille agrandie */
+      height: 250px;
+      border-radius: 8%;
+      object-fit: cover;
+      margin-right: 55px; /* espace entre l’image et le texte */
+      transition: transform 0.3s ease;
+    }
+
+    .container img:hover {
+      transform: scale(1.05); /* petit zoom au survol */
+    }
+
+    .texte {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .texte h2 {
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .texte p {
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #218838;
+    }
+  </style>
+
+
+</body>
+</html>
